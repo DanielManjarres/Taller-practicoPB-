@@ -1,0 +1,41 @@
+{
+  "name": "eventia-core-apipb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src src/api/server.js",
+    "start": "node -r dotenv/config src/index.js",
+    "prisma:generate": "prisma generate",
+    "migrate:dev": "npx prisma migrate dev --name init",
+    "test": "jest --runInBand",
+    "test:unit": "jest tests/unit --runInBand",
+    "test:integration": "jest tests/integration --runInBand",
+    "lint": "eslint src --ext .js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "ioredis": "^5.8.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-security": "^3.0.1",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "prisma": "^6.19.0",
+    "supertest": "^7.1.4"
+  }
+}
